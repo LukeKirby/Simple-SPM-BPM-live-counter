@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>SPM</title>
+
+<script>
+var lastSeconds = 0;
+
+function count_SPM()
+  {
+  time = new Date;
+  seconds = time.getTime();
+  spm = 60000 / (seconds - lastSeconds);
+    document.getElementById("SPM_NUM").innerHTML = Math.round(spm);
+  lastSeconds = seconds;
+  }
+  
+</script>
+
+</head>
+         <body>
+                                
+            <center>
+                            
+                                <div id="SPM_NUM"></div>
+                                    <br>
+                                   
+                                <input type="button" value="SPM" onclick="count_SPM();">
+                                
+                                
+                </center>
+                                
+        </body>
+</html>
+
+
