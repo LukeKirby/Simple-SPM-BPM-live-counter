@@ -5,12 +5,12 @@
 <script>
 var lastSeconds = 0;
 
-function count_SPM()
+function count_SPM(targetElement)
   {
   time = new Date;
   seconds = time.getTime();
   spm = 60000 / (seconds - lastSeconds);
-    document.getElementById("SPM_NUM").innerHTML = Math.round(spm);
+    document.getElementById(targetElement).innerHTML = Math.round(spm);
   lastSeconds = seconds;
   }
   
@@ -18,13 +18,13 @@ function count_SPM()
 
 </head>
          <body>
-                                
+                                    
             <center>
                             
                                 <div id="SPM_NUM"></div>
                                     <br>
                                    
-                                <input type="button" value="SPM" onclick="count_SPM();">
+                                <input type="button" value="SPM" onclick="count_SPM('SPM_NUM');">
                                 
                                 
                 </center>
